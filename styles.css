@@ -1,0 +1,214 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Left Fixed Container */
+.left-container {
+  background-color: #ffffff;
+  width: 25%;
+  height: 100vh;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.left-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.left-container p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.weather-news-btn {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.weather-news-btn:hover {
+  background-color: #002244;
+}
+
+/* Scrollable Right Container */
+.right-container {
+  margin-left: 25%;
+  width: 75%;
+  height: 100vh;
+  overflow-y: auto;
+  background: url(image.png) repeat;
+  padding: 2rem;
+}
+
+/* Weather Search Section */
+.weather-search {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.weather-header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.weather-header .cloud-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-search input {
+  padding: 0.5rem;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.weather-search button {
+  padding: 0.5rem 1rem;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.weather-search button:hover {
+  background-color: #002244;
+}
+
+.weather-search p {
+  color: #555;
+}
+
+/* Recent Searches Section */
+.recent-searches {
+  margin-top: 2rem;
+}
+
+.recent-searches h2 {
+  margin-bottom: 1rem;
+  color: #003366;
+  font-size: 1.25rem;
+}
+
+.recent-searches ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-searches li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  background-color: #f9f9f9;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.recent-searches li:hover {
+  background-color: #f0f0f0;
+}
+
+.recent-searches span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.recent-searches .remove-btn {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.recent-searches .remove-btn:hover {
+  background-color: #e04848;
+}
+
+/* Small Time and Date Container */
+.time-date-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.time-date-container .time,
+.time-date-container .date {
+  font-size: 1rem;
+  color: #003366;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Scrollbar Styling */
+.right-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right-container::-webkit-scrollbar-thumb {
+  background-color: #003366;
+  border-radius: 10px;
+}
+
+.right-container::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .left-container {
+    width: 100%;
+    height: auto;
+    position: static;
+    box-shadow: none;
+  }
+
+  .right-container {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .time-date-container {
+    position: static;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fusion of Weather</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left Fixed Container -->
+    <div class="left-container">
+      <h2>WEATHER IN YOUR LOCATION</h2>
+      <p id="location-info">Please allow location to see details</p>
+      <button class="weather-news-btn" onclick="getUserLocation()">Get Location Weather</button>
+    </div>
+
+    <!-- Scrollable Right Content -->
+    <div class="right-container">
+      <!-- Main Weather Search Section -->
+      <div class="weather-search">
+        <div class="weather-header">
+          <div class="cloud-icon">☁️</div>
+          <h1>FUSION OF WEATHER</h1>
+        </div>
+        <input type="text" placeholder="Search for any location..." id="search-input">
+        <button id="search-btn" onclick="searchCityWeather()">Search</button>
+        <p>Displaying in °C</p>
+      </div>
+
+      <!-- Recent Searches Section -->
+      <div class="recent-searches">
+        <h2>Recent Searches</h2>
+        <ul id="recent-search-list"></ul>
+      </div>
+
+      <!-- Small Time and Date Container -->
+      <div class="time-date-container">
+        <div class="time">Time
+          <span id="time">--:--:--</span>
+        </div>
+        <div class="date">Date
+          <span id="date">--/--/----</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

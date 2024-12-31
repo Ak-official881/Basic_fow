@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Details</title>
+  <link rel="stylesheet" href="details.css">
+</head>
+<body>
+  <div class="weather-details-container">
+    <div class="weather-header">
+      <h1>Weather in <span id="city-name">City</span></h1>
+    </div>
+    <div class="weather-info">
+      <p>Temperature: <span id="temperature">--</span> °C</p>
+      <p>Wind Speed: <span id="wind-speed">--</span> km/h</p>
+      <p>Humidity: <span id="humidity">--</span>%</p>
+      <p>Weather: <span id="weather-description">--</span></p>
+    </div>
+    <button class="back-btn" onclick="goBack()">Go Back</button>
+  </div>
+
+  <script src="render.js"></script>
+</body>
+</html>
